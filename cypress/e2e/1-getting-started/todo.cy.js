@@ -27,7 +27,7 @@ describe('example to-do app', {browser : 'chrome'}, () => {
     })
   })
 
-  it.only('displays two todo items by default',{browser : 'chrome'}, () => {
+  it('displays two todo items by default',{browser : 'chrome'}, () => {
     // We use the `cy.get()` command to get all elements that match the selector.
     // Then, we use `should` to assert that there are two matched items,
     // which are the two default items.
@@ -45,7 +45,7 @@ describe('example to-do app', {browser : 'chrome'}, () => {
     cy.get('.todo-list li').last().should('have.text', 'Walk the dog')
   })
 
-  it.only('can add new todo items', {browser : 'chrome'}, () => {
+  it('can add new todo items', {browser : 'chrome'}, () => {
     // We'll store our item text in a variable so we can reuse it
     const newItem = 'Feed the cat'
 
@@ -63,12 +63,12 @@ describe('example to-do app', {browser : 'chrome'}, () => {
     // Since assertions yield the element that was asserted on,
     // we can chain both of these assertions together into a single statement.
     cy.get('.todo-list li')
-      .should('have.length', 3)
+      .should('have.length', 10)
       .last()
       .should('have.text', newItem)
   })
 
-  it.only('can check off an item as completed', () => {
+  it('can check off an item as completed', () => {
     // In addition to using the `get` command to get an element by selector,
     // we can also use the `contains` command to get an element by its contents.
     // However, this will yield the <label>, which is lowest-level element that contains the text.

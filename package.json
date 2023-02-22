@@ -6,7 +6,8 @@
   "scripts": {
     "cypress:open": "cypress open --e2e --browser chrome",
     "cypress:run": "cypress run",
-    "cypress:specs1": "cypress run --browser chrome --spec \"cypress/e2e/1-*/*\" --headed --no-exit"
+    "cypress:specs1": "cypress run --browser chrome --spec \"cypress/e2e/1-*/*\"",
+    "cypress:two:specs1": "npm run cypress:specs1 --config-file \"configs/custom.config.js\""
   },
   "author": "Bohdan Fedenko",
   "license": "ISC",
