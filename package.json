@@ -4,11 +4,14 @@
   "description": "my_test_project_with_cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open --e2e --browser chrome",
+    "cypress:run": "cypress run",
+    "cypress:specs1": "cypress run --browser chrome --spec \"cypress/e2e/1-*/*\" --headed --no-exit"
   },
   "author": "Bohdan Fedenko",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
     "cypress": "^12.6.0"
   }
 }
