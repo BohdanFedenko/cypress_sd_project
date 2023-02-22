@@ -1,0 +1,14 @@
+{
+  "name": "my_cypress_project",
+  "version": "1.0.0",
+  "description": "my_test_project_with_cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bohdan Fedenko",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.6.0"
+  }
+}
