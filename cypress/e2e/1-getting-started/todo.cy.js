@@ -32,7 +32,6 @@ describe('example to-do app', {browser : 'chrome'}, () => {
     // Then, we use `should` to assert that there are two matched items,
     // which are the two default items.
 
-
     // cy.get('.todo-list li').should('have.length', 2)
     cy.xpath('//ul[@class="todo-list"]/li').should('have.length', 2) 
     
@@ -63,7 +62,7 @@ describe('example to-do app', {browser : 'chrome'}, () => {
     // Since assertions yield the element that was asserted on,
     // we can chain both of these assertions together into a single statement.
     cy.get('.todo-list li')
-      .should('have.length', 10)
+      .should('have.length', 3)
       .last()
       .should('have.text', newItem)
   })
@@ -98,7 +97,8 @@ describe('example to-do app', {browser : 'chrome'}, () => {
       // so that it runs at the start of every test.
       cy.contains('Pay electric bill')
         .parent()
-        .find('input[type=checkbox]')
+        // .find('input[type=checkbox]')
+        .xpath('.//input[@type="checkbox"]')
         .check()
     })
 

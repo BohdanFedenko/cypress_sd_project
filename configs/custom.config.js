@@ -30,6 +30,7 @@ module.exports = defineConfig({
      "runMode": 0,
      "openMode": 0 
   },
+  watchForFileChanges : false,
   //Default Timeouts milliseconds
   defaultCommandTimeout : 4000,
   execTimeout : 60000,
